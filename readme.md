@@ -1,4 +1,4 @@
 # LHS
 Launch Highschool Site, based on the Bones Wordpress theme.
 
-Designed by Jonathan Bell & Daniel Price
+Designed and built by Jon Bell & Dan Price
