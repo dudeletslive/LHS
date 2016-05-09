@@ -3,27 +3,14 @@
 ############
 ## Bones
 ############
-
 Bones.esproj/
 
 ############
-## IDEs
+## LIB / SRC
 ############
-
-*.pydevproject
-.project
-.metadata
-*.swp
-*~.nib
-local.properties
-.classpath
-.settings/
-.loadpath
-.externalToolBuilders/
-*.launch
-.cproject
-.buildpath
-nbproject/
+library/css
+js/*.js
+node_modules
 
 ############
 ## OSes
@@ -37,7 +24,6 @@ nbproject/
 ############
 ## Misc
 ############
-
 bin/
 tmp/
 *.tmp

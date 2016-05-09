@@ -1,0 +1,99 @@
+@import "nib"
+global-reset()
+
+*
+  box-sizing border-box
+  
+@import "partials/_variables"
+@import "partials/_layout"
+
+/*
+ * @TODO: Move components to seperate file
+ *
+ */
+h1.logo
+  background url("../images/logo.png") no-repeat left center
+  background-size 150px auto
+  size 150px 32px
+  text-indent -9999px
+  
+header
+  clearfix()
+  padding ($gr-padding / 2) 0
+  &#menu
+    h1.logo
+      display block
+      float left
+      width 25%
+    nav
+      float left
+      text-align right
+      width 75%
+      .btn
+        margin-left 10px
+
+.hero
+  clearfix()
+  background-color #424242
+  background-size cover
+  color white
+  padding ($gr-padding * 2) 0 ($gr-padding * 8)
+  
+.menu-icon
+  background transparent
+  cursor pointer
+  display inline-block
+  position relative
+  size 28px
+  vertical-align middle
+  i,
+  i:before,
+  i:after
+    background white
+    content ""
+    display inline-block
+    height 2px
+    margin auto
+    absolute top 0 right 0 bottom 0 left 0
+    width 24px
+  i:before
+    top -12px
+  i:after
+    top 12px
+
+.btn
+  background $c-green
+  border-radius 2px
+  color white
+  display inline-block
+  font-family $fn-gotham
+  font-size 14px
+  line-height 32px
+  padding 0 ($gr-padding + 5)
+  size auto 32px
+  text-decoration none
+  vertical-align middle
+
+
+/*
+ * Import these last to override existing styles. 
+ *
+ */
+ 
+/*
+@media (min-width $bp-sm)
+  @import "breakpoints/small"
+@media (min-width $bp-md)
+  @import "breakpoints/medium"
+@media (min-width $bp-lg)
+  @import "breakpoints/large"
+@media (min-width $bp-xl)
+  @import "breakpoints/extra-large"
+*/
+
+/*
+ * @TODO: Remove
+ *
+ */
+body
+  font-family $fn-gotham

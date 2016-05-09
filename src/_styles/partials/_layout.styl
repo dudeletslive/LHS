@@ -1,0 +1,63 @@
+/*
+ * Layout
+ *
+ */
+.wrap
+  margin 0 auto
+  padding 0 $gr-padding
+  @media (min-width $bp-lg)
+    max-width 1160px
+  @media (min-width $bp-xl)
+    max-width 1280px
+    
+.row
+  clearfix()
+  margin 0 -($gr-padding)
+
+.col
+  float left
+  padding 0 $gr-padding
+  img
+    max-width 100%
+    
+grid(class = "xs", columns = 12)
+  for colCount in (1 .. columns)
+    colWidth = (1% * ((colCount / columns) * 100))
+    .col-{class}-{colCount}
+      width colWidth
+
+grid()
+
+@media (min-width $bp-sm)
+  grid("sm")
+  
+@media (min-width $bp-md)
+  grid("md")
+  
+@media (min-width $bp-lg)
+  grid("lg")
+
+@media (min-width $bp-xl)
+  grid("xl")
+  
+
+/*
+ * Hack to Fix Sidebar to Bottom
+ *
+ */
+html,
+body
+  height 100%
+  
+.wrapper
+  height auto !important
+  height 100%
+  margin 0 auto -100px
+  min-height 100%
+  
+footer, .push
+  height 100px
+  
+footer
+  background #EEE
+  padding $gr-padding 0
